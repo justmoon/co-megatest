@@ -1,12 +1,12 @@
 "use strict";
-let supertest = require("../");
+let megatest = require("../");
 let koa = require("koa");
 
-describe("co-supertest", function(){
+describe("co-megatest", function(){
   before(function(){
     let app = koa();
       app.use(function*(){
-      this.body = "test";  
+      this.body = "test";
     });
     this.server = app.listen();
   });
@@ -15,15 +15,15 @@ describe("co-supertest", function(){
   });
   describe("#end()", function(){
     it("should support calls via yield", function*(){
-       let r = yield supertest(this.server).get("/").expect(200).end();
+       let r = yield megatest(this.server).get("/").expect(200).end();
        r.text.should.equal("test");
     });
     it("should support calls with callback", function(done){
-       supertest(this.server).get("/").expect(200).end(function(err, r){
+       megatest(this.server).get("/").expect(200).end(function(err, r){
          if(err) return done(err);
          r.text.should.equal("test");
          done();
        });
     });
-  });	
+  });
 });

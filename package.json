@@ -1,7 +1,7 @@
 {
-  "name": "co-supertest",
-  "version": "0.0.10",
-  "description": "Integration co with supertest",
+  "name": "co-megatest",
+  "version": "1.0.0",
+  "description": "Wrapper for megatest for usage with co",
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha --harmony"
@@ -9,23 +9,25 @@
   "keywords": [
     "co",
     "supertest",
+    "megatest",
     "es6",
     "generators"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/avbel/co-supertest"
+    "url": "https://github.com/justmoon/co-megatest"
   },
-  "author": "avbel",
+  "author": "Stefan Thomas <justmoon@members.fsf.org>",
+  "contributors": ["avbel"],
   "license": "MIT",
   "peerDependencies": {
-    "supertest": "^1.0"
+    "megatest": "^1.0"
   },
   "devDependencies": {
     "should": "~3.3.0",
     "koa": "~0.5.4",
     "mocha": "~1.18.2",
-    "supertest": "^1.0",
+    "megatest": "^1.0",
     "co-mocha": "0.0.2"
   }
 }

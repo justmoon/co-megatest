@@ -1,6 +1,6 @@
 "use strict";
-var supertest = require("supertest");
-var Test = supertest.Test;
+var megatest = require("megatest");
+var Test = megatest.Test;
 
 var oldEnd = Test.prototype.end;
 
@@ -18,4 +18,4 @@ Test.prototype.end = function(){
   };
 }
 
-module.exports = supertest;
+module.exports = megatest;
